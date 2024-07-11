@@ -26,11 +26,16 @@ body{
     padding:5px 8%;
 }
 
-nav{
-    display:flex;
+nav {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: fixed;
+    width: 87%;
+    /* background: rgba(0, 0, 0, 0.8); Optional: Add a background color for the fixed nav */
+    z-index: 1000;
+
 }
 
 .logo{
@@ -67,7 +72,8 @@ nav ul li a:hover::after{
 }
 
 .header-text{
-    margin-top: 10%;
+    padding: 50px;
+    margin-top: 20%;
     font-size: 30px;
 }
 .header-text h1{
@@ -362,6 +368,39 @@ form .b2{
 /*--------------------------------CSS for small Screen-------------------------*/
 nav .fas{
     display: none;
+}
+
+@media only screen and (min-width: 600px){
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25%;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+
 }
 
 @media only screen and (max-width: 600px){
