@@ -31,16 +31,18 @@ nav {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+}
+#nav{
     position: fixed;
-    width: 87%;
-    /* background: rgba(0, 0, 0, 0.8); Optional: Add a background color for the fixed nav */
-    z-index: 1000;
-
+    top: 20px;
+    right: 50px;
 }
 
 .logo{
+    top: 20px;
+    left: 50px;
     width: 200px;
-    height: 180px;
+    height: 50px;
 }
 
 nav ul li{
