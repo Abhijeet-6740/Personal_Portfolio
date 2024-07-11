@@ -44,9 +44,9 @@ function changeText() {
         // If fully typed, switch to erasing after a delay
         if (newText === textArray[index]) {
             isTyping = false;
-            setTimeout(changeText, 500); // Delay before erasing (0.5 seconds)
+            setTimeout(changeText, 1500); // Delay before erasing (1.5 seconds)
         } else {
-            setTimeout(changeText, 50); // Typing speed (50 milliseconds)
+            setTimeout(changeText, 70); // Typing speed (70 milliseconds)
         }
     } else {
         // Erasing effect
@@ -58,7 +58,7 @@ function changeText() {
             isTyping = true;
             index = (index + 1) % textArray.length; // Move to the next text
         }
-        setTimeout(changeText, 50); // Erasing speed (50 milliseconds)
+        setTimeout(changeText, 70); // Erasing speed (70 milliseconds)
     }
 }
 
